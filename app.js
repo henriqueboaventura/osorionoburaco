@@ -15,8 +15,9 @@ const potholeIcon = L.divIcon({
     popupAnchor: [0, -18]
 });
 
-// Load potholes data
+// Store potholes and markers
 let potholes = [];
+let markers = {};
 
 async function loadPotholes() {
     try {
@@ -31,8 +32,17 @@ async function loadPotholes() {
             const marker = L.marker([pothole.lat, pothole.lng], { icon: potholeIcon })
                 .addTo(map);
 
-            marker.on('click', () => showPotholeInfo(pothole));
+            marker.on('click', () => {
+                showPotholeInfo(pothole);
+                updateURL(pothole.id);
+            });
+
+            // Store marker reference by pothole ID
+            markers[pothole.id] = { marker, pothole };
         });
+
+        // Check URL for specific pothole
+        checkURLForPothole();
     } catch (error) {
         console.error('Erro ao carregar dados:', error);
     }
@@ -60,9 +70,50 @@ function showPotholeInfo(pothole) {
     }
 }
 
+// Update URL with pothole ID
+function updateURL(id) {
+    history.replaceState(null, null, `#buraco-${id}`);
+}
+
+// Check URL for pothole ID and open it
+function checkURLForPothole() {
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#buraco-')) {
+        const id = parseInt(hash.replace('#buraco-', ''));
+        openPotholeById(id);
+    }
+}
+
+// Open pothole by ID
+function openPotholeById(id) {
+    const data = markers[id];
+    if (data) {
+        const { marker, pothole } = data;
+
+        // Center map on pothole with zoom
+        map.setView([pothole.lat, pothole.lng], 17);
+
+        // Show info
+        showPotholeInfo(pothole);
+
+        // Briefly highlight the marker
+        const markerElement = marker.getElement();
+        if (markerElement) {
+            markerElement.style.transform = 'scale(1.3)';
+            setTimeout(() => {
+                markerElement.style.transform = '';
+            }, 500);
+        }
+    }
+}
+
+// Listen for hash changes
+window.addEventListener('hashchange', checkURLForPothole);
+
 // Close info card
 document.getElementById('close-info').addEventListener('click', () => {
     document.getElementById('pothole-info').style.display = 'none';
+    history.replaceState(null, null, window.location.pathname);
 });
 
 // Format date to Brazilian format
