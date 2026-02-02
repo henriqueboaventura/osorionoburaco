@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "lat": -29.8862,
+        "lng": -50.2715,
+        "address": "Rua Marechal Floriano, 245 - Centro",
+        "photo": "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=400&h=300&fit=crop",
+        "reporter": "João Silva",
+        "date": "2026-01-15"
+    },
+    {
+        "id": 2,
+        "lat": -29.8891,
+        "lng": -50.2678,
+        "address": "Av. Getúlio Vargas, 1020 - Centro",
+        "photo": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&h=300&fit=crop",
+        "reporter": "Maria Oliveira",
+        "date": "2026-01-18"
+    },
+    {
+        "id": 3,
+        "lat": -29.8845,
+        "lng": -50.2732,
+        "address": "Rua Borges de Medeiros, 88 - Centro",
+        "photo": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+        "reporter": "Carlos Santos",
+        "date": "2026-01-20"
+    },
+    {
+        "id": 4,
+        "lat": -29.8908,
+        "lng": -50.2651,
+        "address": "Rua Júlio de Castilhos, 456 - Centro",
+        "photo": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=300&fit=crop",
+        "reporter": "Ana Pereira",
+        "date": "2026-01-22"
+    },
+    {
+        "id": 5,
+        "lat": -29.8833,
+        "lng": -50.2689,
+        "address": "Rua Voluntários da Pátria, 320 - Centro",
+        "photo": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=400&h=300&fit=crop",
+        "reporter": "Pedro Ferreira",
+        "date": "2026-01-25"
+    },
+    {
+        "id": 6,
+        "lat": -29.8918,
+        "lng": -50.2705,
+        "address": "Av. Brasil, 780 - Medianeira",
+        "photo": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=300&fit=crop",
+        "reporter": "Lucia Martins",
+        "date": "2026-01-27"
+    },
+    {
+        "id": 7,
+        "lat": -29.8855,
+        "lng": -50.2658,
+        "address": "Rua Dom Pedro II, 150 - Centro",
+        "photo": "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&h=300&fit=crop",
+        "reporter": "Roberto Almeida",
+        "date": "2026-01-28"
+    },
+    {
+        "id": 8,
+        "lat": -29.8878,
+        "lng": -50.2742,
+        "address": "Rua Osvaldo Aranha, 67 - Caravágio",
+        "photo": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop",
+        "reporter": "Fernanda Costa",
+        "date": "2026-01-29"
+    },
+    {
+        "id": 9,
+        "lat": -29.8898,
+        "lng": -50.2623,
+        "address": "Rua Independência, 890 - Albatroz",
+        "photo": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400&h=300&fit=crop",
+        "reporter": "Marcos Ribeiro",
+        "date": "2026-01-30"
+    },
+    {
+        "id": 10,
+        "lat": -29.8825,
+        "lng": -50.2718,
+        "address": "Rua 7 de Setembro, 234 - Centro",
+        "photo": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=400&h=300&fit=crop",
+        "reporter": "Juliana Souza",
+        "date": "2026-02-01"
+    },
+    {
+        "id": 11,
+        "lat": -29.8941,
+        "lng": -50.2668,
+        "address": "Av. Presidente Kennedy, 1500 - Medianeira",
+        "photo": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop",
+        "reporter": "Anônimo",
+        "date": "2026-02-01"
+    },
+    {
+        "id": 12,
+        "lat": -29.8812,
+        "lng": -50.2695,
+        "address": "Rua Tiradentes, 45 - Centro",
+        "photo": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=300&fit=crop",
+        "reporter": "Ricardo Lima",
+        "date": "2026-02-02"
+    }
+]
