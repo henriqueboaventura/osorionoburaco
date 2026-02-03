@@ -22,4 +22,100 @@
         "fixedDate": null
     }
 
+,
+    {
+        "id": 3,
+        "lat": -29.891761,
+        "lng": -50.2556387,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140209-0umtwe.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 4,
+        "lat": -29.8889233,
+        "lng": -50.2587535,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140209-99zg19.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 5,
+        "lat": -29.8889005,
+        "lng": -50.2587305,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140210-dkg7kb.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 6,
+        "lat": -29.8885609,
+        "lng": -50.2601751,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140210-pv6ckm.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 7,
+        "lat": -29.8890161,
+        "lng": -50.2607978,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140211-x9o7lp.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 8,
+        "lat": -29.8896196,
+        "lng": -50.262371,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140211-m41vyq.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 9,
+        "lat": -29.8899414,
+        "lng": -50.2634525,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140212-ncbsfv.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 10,
+        "lat": -29.8892002,
+        "lng": -50.2636182,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203140212-i8anzj.jpg",
+        "reporter": "photos",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]

@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # Process and optimize images for Osório no Buraco
-# Extracts GPS coordinates and adds entry to data.json
+# Extracts GPS coordinates, reverse geocodes address, and adds entry to data.json
 #
-# Usage: ./scripts/process-image.sh <input_image> [reporter_name] [address]
+# Usage: ./scripts/process-image.sh <input_image> [reporter_name]
 #
 # Example:
 #   ./scripts/process-image.sh ~/Downloads/foto.jpg
 #   ./scripts/process-image.sh ~/Downloads/foto.jpg "João Silva"
-#   ./scripts/process-image.sh ~/Downloads/foto.jpg "João Silva" "Rua das Flores, 123"
 
 set -e
 
@@ -24,18 +23,16 @@ DATA_FILE="$PROJECT_DIR/data.json"
 
 # Check if input file is provided
 if [ -z "$1" ]; then
-    echo "Usage: $0 <input_image> [reporter_name] [address]"
+    echo "Usage: $0 <input_image> [reporter_name]"
     echo ""
     echo "Examples:"
     echo "  $0 ~/Downloads/pothole.jpg"
     echo "  $0 ~/Downloads/pothole.jpg \"João Silva\""
-    echo "  $0 ~/Downloads/pothole.jpg \"João Silva\" \"Rua das Flores, 123\""
     exit 1
 fi
 
 INPUT_FILE="$1"
 REPORTER="${2:-Anônimo}"
-ADDRESS="${3:-}"
 
 # Check if input file exists
 if [ ! -f "$INPUT_FILE" ]; then
@@ -97,6 +94,41 @@ extract_date() {
     fi
 
     echo "$photo_date"
+}
+
+# Reverse geocode coordinates to address using Nominatim (OpenStreetMap)
+reverse_geocode() {
+    local lat="$1"
+    local lng="$2"
+
+    # Call Nominatim API with proper User-Agent (required)
+    local response=$(curl -s -A "OsorioNoBuraco/1.0" \
+        "https://nominatim.openstreetmap.org/reverse?format=json&lat=$lat&lon=$lng&zoom=18&addressdetails=1")
+
+    # Extract address components
+    local road=$(echo "$response" | grep -o '"road":"[^"]*"' | head -1 | cut -d'"' -f4)
+    local house_number=$(echo "$response" | grep -o '"house_number":"[^"]*"' | head -1 | cut -d'"' -f4)
+    local suburb=$(echo "$response" | grep -o '"suburb":"[^"]*"' | head -1 | cut -d'"' -f4)
+    local neighbourhood=$(echo "$response" | grep -o '"neighbourhood":"[^"]*"' | head -1 | cut -d'"' -f4)
+
+    # Use neighbourhood if suburb is empty
+    if [ -z "$suburb" ]; then
+        suburb="$neighbourhood"
+    fi
+
+    # Build address string
+    local address=""
+    if [ -n "$road" ]; then
+        address="$road"
+        if [ -n "$house_number" ]; then
+            address="$address, $house_number"
+        fi
+        if [ -n "$suburb" ]; then
+            address="$address - $suburb"
+        fi
+    fi
+
+    echo "$address"
 }
 
 # Get next ID from data.json
@@ -193,6 +225,18 @@ if [ -n "$LAT" ] && [ -n "$LNG" ]; then
     echo "Latitude: $LAT"
     echo "Longitude: $LNG"
     echo "Date: $PHOTO_DATE"
+    echo ""
+
+    # Reverse geocode to get address
+    echo "Looking up address..."
+    ADDRESS=$(reverse_geocode "$LAT" "$LNG")
+
+    if [ -n "$ADDRESS" ]; then
+        echo "Address: $ADDRESS"
+    else
+        ADDRESS="Endereço a confirmar"
+        echo "Address: Could not determine (will need manual update)"
+    fi
     echo ""
 
     # Add to data.json
