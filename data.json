@@ -1,122 +1,13 @@
 [
     {
         "id": 1,
-        "lat": -29.8862,
-        "lng": -50.2715,
-        "address": "Rua Marechal Floriano, 245 - Centro",
-        "photo": "photos/buraco-01.jpg",
-        "reporter": "João Silva",
-        "date": "2026-01-15",
-        "fixed": false
-    },
-    {
-        "id": 2,
-        "lat": -29.8891,
-        "lng": -50.2678,
-        "address": "Av. Getúlio Vargas, 1020 - Centro",
-        "photo": "photos/buraco-02.jpg",
-        "reporter": "Maria Oliveira",
-        "date": "2026-01-18",
-        "fixed": true
-    },
-    {
-        "id": 3,
-        "lat": -29.8845,
-        "lng": -50.2732,
-        "address": "Rua Borges de Medeiros, 88 - Centro",
-        "photo": "photos/buraco-03.jpg",
-        "reporter": "Carlos Santos",
-        "date": "2026-01-20",
-        "fixed": false
-    },
-    {
-        "id": 4,
-        "lat": -29.8908,
-        "lng": -50.2651,
-        "address": "Rua Júlio de Castilhos, 456 - Centro",
-        "photo": "photos/buraco-04.jpg",
-        "reporter": "Ana Pereira",
-        "date": "2026-01-22",
-        "fixed": true
-    },
-    {
-        "id": 5,
-        "lat": -29.8833,
-        "lng": -50.2689,
-        "address": "Rua Voluntários da Pátria, 320 - Centro",
-        "photo": "photos/buraco-05.jpg",
-        "reporter": "Pedro Ferreira",
-        "date": "2026-01-25",
-        "fixed": false
-    },
-    {
-        "id": 6,
-        "lat": -29.8918,
-        "lng": -50.2705,
-        "address": "Av. Brasil, 780 - Medianeira",
-        "photo": "photos/buraco-06.jpg",
-        "reporter": "Lucia Martins",
-        "date": "2026-01-27",
-        "fixed": false
-    },
-    {
-        "id": 7,
-        "lat": -29.8855,
-        "lng": -50.2658,
-        "address": "Rua Dom Pedro II, 150 - Centro",
-        "photo": "photos/buraco-07.jpg",
-        "reporter": "Roberto Almeida",
-        "date": "2026-01-28",
-        "fixed": true
-    },
-    {
-        "id": 8,
-        "lat": -29.8878,
-        "lng": -50.2742,
-        "address": "Rua Osvaldo Aranha, 67 - Caravágio",
-        "photo": "photos/buraco-08.jpg",
-        "reporter": "Fernanda Costa",
-        "date": "2026-01-29",
-        "fixed": false
-    },
-    {
-        "id": 9,
-        "lat": -29.8898,
-        "lng": -50.2623,
-        "address": "Rua Independência, 890 - Albatroz",
-        "photo": "photos/buraco-09.jpg",
-        "reporter": "Marcos Ribeiro",
-        "date": "2026-01-30",
-        "fixed": false
-    },
-    {
-        "id": 10,
-        "lat": -29.8825,
-        "lng": -50.2718,
-        "address": "Rua 7 de Setembro, 234 - Centro",
-        "photo": "photos/buraco-10.jpg",
-        "reporter": "Juliana Souza",
-        "date": "2026-02-01",
-        "fixed": false
-    },
-    {
-        "id": 11,
-        "lat": -29.8941,
-        "lng": -50.2668,
-        "address": "Av. Presidente Kennedy, 1500 - Medianeira",
-        "photo": "photos/buraco-11.jpg",
-        "reporter": "Anônimo",
-        "date": "2026-02-01",
-        "fixed": false
-    },
-    {
-        "id": 12,
-        "lat": -29.8812,
-        "lng": -50.2695,
-        "address": "Rua Tiradentes, 45 - Centro",
-        "photo": "photos/buraco-12.jpg",
-        "reporter": "Ricardo Lima",
-        "date": "2026-02-02",
-        "fixed": false
+        "lat": -29.8918172,
+        "lng": -50.2425563,
+        "address": "Rua Viana Moog, 507 - Panorâmico",
+        "photo": "photos/buraco-20260202214138-hzauz1.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-02",
+        "fixed": false,
+        "fixedDate": null
     }
 ]

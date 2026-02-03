@@ -57,22 +57,27 @@ function showPotholeInfo(pothole) {
     const photo = document.getElementById('pothole-photo');
     const address = document.getElementById('pothole-address');
     const reporter = document.getElementById('pothole-reporter');
-    const date = document.getElementById('pothole-date');
+    const reportedDate = document.getElementById('pothole-reported-date');
+    const fixedDateRow = document.getElementById('pothole-fixed-date-row');
+    const fixedDate = document.getElementById('pothole-fixed-date');
     const status = document.getElementById('pothole-status');
 
     photo.src = pothole.photo;
     photo.alt = `Buraco na ${pothole.address}`;
     address.textContent = pothole.address;
     reporter.textContent = pothole.reporter;
-    date.textContent = formatDate(pothole.date);
+    reportedDate.textContent = formatDate(pothole.reportedDate);
 
-    // Update status badge
+    // Update status badge and fixed date
     if (pothole.fixed) {
         status.textContent = 'Consertado';
         status.className = 'status-badge fixed';
+        fixedDateRow.style.display = 'block';
+        fixedDate.textContent = formatDate(pothole.fixedDate);
     } else {
         status.textContent = 'Pendente';
         status.className = 'status-badge pending';
+        fixedDateRow.style.display = 'none';
     }
 
     infoCard.style.display = 'block';
