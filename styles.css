@@ -238,6 +238,32 @@ body {
     transform: scale(1.1);
 }
 
+.pothole-marker.fixed {
+    background: #4CAF50;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.status-badge.pending {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.status-badge.fixed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
 /* Leaflet Popup Override */
 .leaflet-popup-content-wrapper {
     border-radius: 12px;

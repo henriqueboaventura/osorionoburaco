@@ -6,14 +6,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Custom pothole icon
-const potholeIcon = L.divIcon({
-    className: 'pothole-marker',
-    html: '🕳️',
-    iconSize: [36, 36],
-    iconAnchor: [18, 18],
-    popupAnchor: [0, -18]
-});
+// Custom pothole icons
+function createPotholeIcon(fixed) {
+    return L.divIcon({
+        className: `pothole-marker${fixed ? ' fixed' : ''}`,
+        html: fixed ? '✓' : '🕳️',
+        iconSize: [36, 36],
+        iconAnchor: [18, 18],
+        popupAnchor: [0, -18]
+    });
+}
 
 // Store potholes and markers
 let potholes = [];
@@ -29,7 +31,8 @@ async function loadPotholes() {
 
         // Add markers to map
         potholes.forEach(pothole => {
-            const marker = L.marker([pothole.lat, pothole.lng], { icon: potholeIcon })
+            const icon = createPotholeIcon(pothole.fixed);
+            const marker = L.marker([pothole.lat, pothole.lng], { icon })
                 .addTo(map);
 
             marker.on('click', () => {
@@ -55,12 +58,22 @@ function showPotholeInfo(pothole) {
     const address = document.getElementById('pothole-address');
     const reporter = document.getElementById('pothole-reporter');
     const date = document.getElementById('pothole-date');
+    const status = document.getElementById('pothole-status');
 
     photo.src = pothole.photo;
     photo.alt = `Buraco na ${pothole.address}`;
     address.textContent = pothole.address;
     reporter.textContent = pothole.reporter;
     date.textContent = formatDate(pothole.date);
+
+    // Update status badge
+    if (pothole.fixed) {
+        status.textContent = 'Consertado';
+        status.className = 'status-badge fixed';
+    } else {
+        status.textContent = 'Pendente';
+        status.className = 'status-badge pending';
+    }
 
     infoCard.style.display = 'block';
 
