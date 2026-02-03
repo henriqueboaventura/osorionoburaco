@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Asphalt background -->
+  <rect width="64" height="64" fill="#3d3d3d" rx="8"/>
+
+  <!-- Pothole outer edge (cracked asphalt) -->
+  <ellipse cx="32" cy="34" rx="24" ry="18" fill="#2a2a2a"/>
+
+  <!-- Pothole inner shadow -->
+  <ellipse cx="32" cy="36" rx="20" ry="14" fill="#1a1a1a"/>
+
+  <!-- Pothole depth (darkest) -->
+  <ellipse cx="32" cy="38" rx="14" ry="10" fill="#0d0d0d"/>
+
+  <!-- Crack lines -->
+  <path d="M8 20 L18 28 M56 18 L46 26 M10 48 L20 42 M54 50 L44 42"
+        stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Warning accent -->
+  <circle cx="32" cy="12" r="6" fill="#ff6b6b"/>
+  <text x="32" y="16" text-anchor="middle" fill="white" font-size="10" font-weight="bold">!</text>
+</svg>
