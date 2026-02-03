@@ -109,4 +109,148 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 11,
+        "lat": -29.8913777777778,
+        "lng": -50.2419583333333,
+        "address": "Viana Moog - Panorâmico",
+        "photo": "photos/buraco-20260203201119-lwfo4q.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 12,
+        "lat": -29.8923944444444,
+        "lng": -50.2438305555556,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260203201122-m57fpz.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 13,
+        "lat": -29.8899944444444,
+        "lng": -50.2465666666667,
+        "address": "Estância da Serra - Vila da Serra",
+        "photo": "photos/buraco-20260203201126-4kd6d0.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 14,
+        "lat": -29.885675,
+        "lng": -50.2487638888889,
+        "address": "Estância da Serra - Vila da Serra",
+        "photo": "photos/buraco-20260203201129-o83h0r.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 15,
+        "lat": -29.8860555555556,
+        "lng": -50.2492833333333,
+        "address": "Conceição do Arroio - Vila da Serra",
+        "photo": "photos/buraco-20260203201133-9zp1qk.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 16,
+        "lat": -29.8888805555556,
+        "lng": -50.2479361111111,
+        "address": "Conceição do Arroio - Vila da Serra",
+        "photo": "photos/buraco-20260203201136-psaum3.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 17,
+        "lat": -29.8887166666667,
+        "lng": -50.2480777777778,
+        "address": "Conceição do Arroio - Vila da Serra",
+        "photo": "photos/buraco-20260203201139-fjt63o.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 18,
+        "lat": -29.8891833333333,
+        "lng": -50.2479055555556,
+        "address": "Conceição do Arroio - Vila da Serra",
+        "photo": "photos/buraco-20260203201143-29p725.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 19,
+        "lat": -29.889575,
+        "lng": -50.2426722222222,
+        "address": "Rua da Lagoa - Vila da Serra",
+        "photo": "photos/buraco-20260203201146-t285yt.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 20,
+        "lat": -29.8900416666667,
+        "lng": -50.2420833333333,
+        "address": "Josué Guimarães - Panorâmico",
+        "photo": "photos/buraco-20260203201150-1xrb0b.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 21,
+        "lat": -29.89055,
+        "lng": -50.2415861111111,
+        "address": "Alfredo Trespach - Panorâmico",
+        "photo": "photos/buraco-20260203201153-j19l3i.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 22,
+        "lat": -29.8918083333333,
+        "lng": -50.2408222222222,
+        "address": "Alfredo Trespach - Panorâmico",
+        "photo": "photos/buraco-20260203201157-zivt8d.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
