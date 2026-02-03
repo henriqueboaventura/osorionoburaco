@@ -9,5 +9,17 @@
         "reportedDate": "2026-02-02",
         "fixed": false,
         "fixedDate": null
+    },
+    {
+        "id": 2,
+        "lat": -29.8900543,
+        "lng": -50.2419877,
+        "address": "Rua Josué Guimarães, 100 - Panorâmico",
+        "photo": "photos/buraco-20260203130813-a3yi3s.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-03",
+        "fixed": false,
+        "fixedDate": null
     }
+
 ]
