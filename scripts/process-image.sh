@@ -3,11 +3,16 @@
 # Process and optimize images for Osório no Buraco
 # Extracts GPS coordinates, reverse geocodes address, and adds entry to data.json
 #
-# Usage: ./scripts/process-image.sh <input_image> [reporter_name]
+# Usage: ./scripts/process-image.sh <input_image> [reporter_name] [address]
 #
-# Example:
+# Examples:
 #   ./scripts/process-image.sh ~/Downloads/foto.jpg
 #   ./scripts/process-image.sh ~/Downloads/foto.jpg "João Silva"
+#   ./scripts/process-image.sh ~/Downloads/foto.jpg "João Silva" "Rua das Flores, 123 - Centro, Osório"
+#
+# If address is provided, coordinates will be fetched from the address (geocoding).
+# If address is not provided, coordinates will be extracted from image EXIF and
+# address will be looked up via reverse geocoding.
 
 set -e
 
@@ -23,16 +28,21 @@ DATA_FILE="$PROJECT_DIR/data.json"
 
 # Check if input file is provided
 if [ -z "$1" ]; then
-    echo "Usage: $0 <input_image> [reporter_name]"
+    echo "Usage: $0 <input_image> [reporter_name] [address]"
     echo ""
     echo "Examples:"
     echo "  $0 ~/Downloads/pothole.jpg"
     echo "  $0 ~/Downloads/pothole.jpg \"João Silva\""
+    echo "  $0 ~/Downloads/pothole.jpg \"João Silva\" \"Rua das Flores, 123 - Centro, Osório\""
+    echo ""
+    echo "If address is provided, coordinates will be fetched from the address."
+    echo "Otherwise, coordinates are extracted from image EXIF data."
     exit 1
 fi
 
 INPUT_FILE="$1"
 REPORTER="${2:-Anônimo}"
+ADDRESS_INPUT="${3:-}"
 
 # Check if input file exists
 if [ ! -f "$INPUT_FILE" ]; then
@@ -94,6 +104,24 @@ extract_date() {
     fi
 
     echo "$photo_date"
+}
+
+# Geocode address to coordinates using Nominatim (OpenStreetMap)
+geocode_address() {
+    local address="$1"
+
+    # URL encode the address
+    local encoded_address=$(printf '%s' "$address" | python3 -c "import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))")
+
+    # Call Nominatim API with proper User-Agent (required)
+    local response=$(curl -s -A "OsorioNoBuraco/1.0" \
+        "https://nominatim.openstreetmap.org/search?format=json&q=${encoded_address},Osório,RS,Brasil&limit=1")
+
+    # Extract coordinates
+    local lat=$(echo "$response" | grep -o '"lat":"[^"]*"' | head -1 | cut -d'"' -f4)
+    local lng=$(echo "$response" | grep -o '"lon":"[^"]*"' | head -1 | cut -d'"' -f4)
+
+    echo "$lat $lng"
 }
 
 # Reverse geocode coordinates to address using Nominatim (OpenStreetMap)
@@ -187,11 +215,30 @@ EOF
 
 echo "Processing image..."
 
-# Extract GPS before resizing (EXIF may be lost)
-GPS_DATA=$(extract_gps "$INPUT_FILE")
-LAT=$(echo "$GPS_DATA" | awk '{print $1}')
-LNG=$(echo "$GPS_DATA" | awk '{print $2}')
+# Extract date from EXIF
 PHOTO_DATE=$(extract_date "$INPUT_FILE")
+
+# Determine coordinates and address
+if [ -n "$ADDRESS_INPUT" ]; then
+    # Address provided - geocode to get coordinates
+    echo "Address provided, looking up coordinates..."
+    GPS_DATA=$(geocode_address "$ADDRESS_INPUT")
+    LAT=$(echo "$GPS_DATA" | awk '{print $1}')
+    LNG=$(echo "$GPS_DATA" | awk '{print $2}')
+    ADDRESS="$ADDRESS_INPUT"
+
+    if [ -z "$LAT" ] || [ -z "$LNG" ]; then
+        echo "Error: Could not find coordinates for address: $ADDRESS_INPUT"
+        echo "Try a more specific address or check for typos."
+        exit 1
+    fi
+else
+    # No address provided - extract GPS from EXIF
+    GPS_DATA=$(extract_gps "$INPUT_FILE")
+    LAT=$(echo "$GPS_DATA" | awk '{print $1}')
+    LNG=$(echo "$GPS_DATA" | awk '{print $2}')
+    ADDRESS=""
+fi
 
 # Process image
 if command -v sips &> /dev/null; then
@@ -221,21 +268,25 @@ echo ""
 if [ -n "$LAT" ] && [ -n "$LNG" ]; then
     NEXT_ID=$(get_next_id)
 
-    echo "GPS coordinates found!"
-    echo "Latitude: $LAT"
-    echo "Longitude: $LNG"
+    echo "Coordinates:"
+    echo "  Latitude: $LAT"
+    echo "  Longitude: $LNG"
     echo "Date: $PHOTO_DATE"
     echo ""
 
-    # Reverse geocode to get address
-    echo "Looking up address..."
-    ADDRESS=$(reverse_geocode "$LAT" "$LNG")
+    # If no address provided, reverse geocode to get it
+    if [ -z "$ADDRESS" ]; then
+        echo "Looking up address from coordinates..."
+        ADDRESS=$(reverse_geocode "$LAT" "$LNG")
 
-    if [ -n "$ADDRESS" ]; then
-        echo "Address: $ADDRESS"
+        if [ -z "$ADDRESS" ]; then
+            ADDRESS="Endereço a confirmar"
+            echo "Address: Could not determine (will need manual update)"
+        else
+            echo "Address: $ADDRESS"
+        fi
     else
-        ADDRESS="Endereço a confirmar"
-        echo "Address: Could not determine (will need manual update)"
+        echo "Address: $ADDRESS"
     fi
     echo ""
 
@@ -246,8 +297,9 @@ if [ -n "$LAT" ] && [ -n "$LNG" ]; then
     echo ""
     echo "View at: https://henriqueboaventura.github.io/osorionoburaco/#buraco-$NEXT_ID"
 else
-    echo "No GPS coordinates found in image."
+    echo "No GPS coordinates found in image and no address provided."
     echo ""
-    echo "Add manually to data.json:"
-    echo "\"photo\": \"photos/$UNIQUE_NAME\""
+    echo "To add this pothole, either:"
+    echo "1. Provide an address: $0 \"$INPUT_FILE\" \"$REPORTER\" \"Rua Example, 123\""
+    echo "2. Add manually to data.json with the photo path: photos/$UNIQUE_NAME"
 fi
