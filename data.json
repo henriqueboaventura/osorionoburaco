@@ -253,4 +253,28 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 23,
+        "lat": -29.8916138888889,
+        "lng": -50.2704916666667,
+        "address": "Rua Firmino Osório - Centro",
+        "photo": "photos/buraco-20260204093026-e1co2q.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-04",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 24,
+        "lat": -29.8974444444444,
+        "lng": -50.2588472222222,
+        "address": "Avenida Idelfonso Simões Lopes - Pitangas",
+        "photo": "photos/buraco-20260204093032-p6pqy3.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-04",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
