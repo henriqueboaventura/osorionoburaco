@@ -289,4 +289,17 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 26,
+        "lat": -29.896074,
+        "lng": -50.244427,
+        "address": "Rua José Vieira, esdquina com Zilon Bonsi",
+        "photo": "photos/buraco-20260204145729-ptdkvu.jpg",
+        "reporter": "Henrique Kreche",
+        "reportedDate": "2026-02-04",
+        "fixed": false,
+        "fixedDate": null
+    }
+
 ]
