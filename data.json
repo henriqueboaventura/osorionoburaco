@@ -302,4 +302,16 @@
         "fixedDate": null
     }
 
+,
+    {
+        "id": 27,
+        "lat": -29.8926361111111,
+        "lng": -50.2512555555556,
+        "address": "Rua Conego Pedro Jacob - Caravagio",
+        "photo": "photos/buraco-20260204183308-j1qe4u.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-04",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
