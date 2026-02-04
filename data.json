@@ -277,4 +277,16 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 25,
+        "lat": -29.895695,
+        "lng": -50.273844,
+        "address": "Rua Barão do Triunfo 1986, esquinas rua Padre Réus e rua São José.",
+        "photo": "photos/buraco-20260204140405-kd2911.jpg",
+        "reporter": "Matheus Neto",
+        "reportedDate": "2026-02-04",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
