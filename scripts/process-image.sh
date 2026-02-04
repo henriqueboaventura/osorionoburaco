@@ -264,15 +264,14 @@ echo "Output: $OUTPUT_FILE"
 echo "Size: $FILE_SIZE"
 echo ""
 
+NEXT_ID=$(get_next_id)
+NEEDS_COORDINATES=false
+
 # Check if GPS data was found
 if [ -n "$LAT" ] && [ -n "$LNG" ]; then
-    NEXT_ID=$(get_next_id)
-
     echo "Coordinates:"
     echo "  Latitude: $LAT"
     echo "  Longitude: $LNG"
-    echo "Date: $PHOTO_DATE"
-    echo ""
 
     # If no address provided, reverse geocode to get it
     if [ -z "$ADDRESS" ]; then
@@ -288,18 +287,42 @@ if [ -n "$LAT" ] && [ -n "$LNG" ]; then
     else
         echo "Address: $ADDRESS"
     fi
-    echo ""
-
-    # Add to data.json
-    add_to_json "$NEXT_ID" "$LAT" "$LNG" "photos/$UNIQUE_NAME" "$REPORTER" "$PHOTO_DATE" "$ADDRESS"
-
-    echo "Added to data.json with ID: $NEXT_ID"
-    echo ""
-    echo "View at: https://henriqueboaventura.github.io/osorionoburaco/#buraco-$NEXT_ID"
 else
-    echo "No GPS coordinates found in image and no address provided."
+    # No GPS coordinates found - use placeholder values
+    LAT=0
+    LNG=0
+    ADDRESS="Endereço a confirmar"
+    NEEDS_COORDINATES=true
+
+    echo "WARNING: No GPS coordinates found in image!"
+    echo "Using placeholder coordinates (0, 0)"
+fi
+
+echo "Date: $PHOTO_DATE"
+echo ""
+
+# Add to data.json
+add_to_json "$NEXT_ID" "$LAT" "$LNG" "photos/$UNIQUE_NAME" "$REPORTER" "$PHOTO_DATE" "$ADDRESS"
+
+echo "Added to data.json with ID: $NEXT_ID"
+echo ""
+
+if [ "$NEEDS_COORDINATES" = true ]; then
+    echo "=============================================="
+    echo "⚠️  ACTION REQUIRED: UPDATE COORDINATES!"
+    echo "=============================================="
     echo ""
-    echo "To add this pothole, either:"
-    echo "1. Provide an address: $0 \"$INPUT_FILE\" \"$REPORTER\" \"Rua Example, 123\""
-    echo "2. Add manually to data.json with the photo path: photos/$UNIQUE_NAME"
+    echo "The pothole was added but has NO valid coordinates."
+    echo "The pin will appear at (0, 0) which is in the ocean!"
+    echo ""
+    echo "Please edit data.json and update entry ID $NEXT_ID with:"
+    echo "  - Correct latitude (lat)"
+    echo "  - Correct longitude (lng)"
+    echo "  - Address"
+    echo ""
+    echo "You can get coordinates from Google Maps by right-clicking"
+    echo "on the location and selecting the coordinates."
+    echo "=============================================="
+else
+    echo "View at: https://henriqueboaventura.github.io/osorionoburaco/#buraco-$NEXT_ID"
 fi
