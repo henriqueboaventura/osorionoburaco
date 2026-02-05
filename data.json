@@ -314,4 +314,28 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 28,
+        "lat": -29.889809, 
+        "lng": -50.260360,
+        "address": "Rua Duque de Caxias, esquina com Voluntários da Pátria",
+        "photo": "photos/buraco-20260205081847-wyc159.jpg",
+        "reporter": "Fabiano Driver",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 29,
+        "lat": -29.8909611111111,
+        "lng": -50.2594388888889,
+        "address": "Rua Costa Gama - Porto Lacustre",
+        "photo": "photos/buraco-20260205082152-d8jcog.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
