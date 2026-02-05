@@ -338,4 +338,16 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 30,
+        "lat": -29.9025034,
+        "lng": -50.2701904,
+        "address": "Rua 16 de dezembro, 935",
+        "photo": "photos/buraco-20260205114133-7bzyy4.jpg",
+        "reporter": "Pah Kingeski",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
