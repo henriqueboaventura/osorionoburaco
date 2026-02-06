@@ -350,4 +350,100 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 31,
+        "lat": -29.8903071,
+        "lng": -50.2608057,
+        "address": "Travessa Manuel Osório Saraiva - Porto Lacustre",
+        "photo": "photos/buraco-20260206090235-pfbr8n.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 32,
+        "lat": -29.8892586,
+        "lng": -50.259338,
+        "address": "Rua Voluntários da Pátria - Porto Lacustre",
+        "photo": "photos/buraco-20260206090239-y7lt3i.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 33,
+        "lat": -29.8892586,
+        "lng": -50.259338,
+        "address": "Rua Voluntários da Pátria - Porto Lacustre",
+        "photo": "photos/buraco-20260206090242-mx6u3n.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 34,
+        "lat": -29.8889355,
+        "lng": -50.2588889,
+        "address": "Rua Brasil - Porto Lacustre",
+        "photo": "photos/buraco-20260206090245-80v8hd.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 35,
+        "lat": -29.8903733,
+        "lng": -50.2502314,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260206090247-o9oues.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 36,
+        "lat": -29.8903532,
+        "lng": -50.2492437,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260206090250-jkccbj.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 37,
+        "lat": -29.8903532,
+        "lng": -50.2492437,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260206090253-rq89jc.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 38,
+        "lat": -29.8902888,
+        "lng": -50.2492966,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260206090256-9f03ro.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-05",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
