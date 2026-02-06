@@ -446,4 +446,16 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 39,
+        "lat": -29.897428,
+        "lng": -50.2587820,
+        "address": "Rua Ildefonso Simões Lopes, 1047",
+        "photo": "photos/buraco-20260206183417-3kay54.jpg",
+        "reporter": "Liliane Nunes",
+        "reportedDate": "2026-02-06",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
