@@ -458,4 +458,208 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 40,
+        "lat": -29.8971138888889,
+        "lng": -50.2580944444444,
+        "address": "Avenida Idelfonso Simões Lopes - Pitangas",
+        "photo": "photos/buraco-20260209083834-2e7qxn.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-07",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 41,
+        "lat": -29.8967083333333,
+        "lng": -50.2577638888889,
+        "address": "Rua Leão Rodrigues Madalena - Pitangas",
+        "photo": "photos/buraco-20260209083838-9t4c2c.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-07",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 42,
+        "lat": -29.8903361111111,
+        "lng": -50.2486083333333,
+        "address": "Rua da Lagoa - Farroupilha",
+        "photo": "photos/buraco-20260209083842-56vcep.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 43,
+        "lat": -29.8904166666667,
+        "lng": -50.2492361111111,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260209083846-aax020.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 44,
+        "lat": -29.8902388888889,
+        "lng": -50.2491027777778,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260209083849-bjvu7p.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 45,
+        "lat": -29.8902555555556,
+        "lng": -50.2492138888889,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260209083853-lvtp8m.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 46,
+        "lat": -29.8903277777778,
+        "lng": -50.249675,
+        "address": "Travessa Formasio - Farroupilha",
+        "photo": "photos/buraco-20260209083856-fck608.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 47,
+        "lat": -29.8860972222222,
+        "lng": -50.2576138888889,
+        "address": "Rua Altair Mason - Caiu do Céu",
+        "photo": "photos/buraco-20260209083900-6w1s5f.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 48,
+        "lat": -29.8859222222222,
+        "lng": -50.2577472222222,
+        "address": "Rua Altair Mason - Caiu do Céu",
+        "photo": "photos/buraco-20260209083903-4furfh.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 49,
+        "lat": -29.8851138888889,
+        "lng": -50.2593583333333,
+        "address": "Rua Professor Lony B. da Silva - Caiu do Céu",
+        "photo": "photos/buraco-20260209083907-4iotba.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 50,
+        "lat": -29.8818694444444,
+        "lng": -50.2605666666667,
+        "address": "Avenida Marechal Floriano Peixoto - Caiu do Céu",
+        "photo": "photos/buraco-20260209083910-vq5hr2.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 51,
+        "lat": -29.8817361111111,
+        "lng": -50.2604666666667,
+        "address": "Rua Marechal Floriano Peixoto - Caiu do Céu",
+        "photo": "photos/buraco-20260209083914-ba4j57.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 52,
+        "lat": -29.8861555555556,
+        "lng": -50.263,
+        "address": "Rua Professora Leda Leal - Caiu do Céu",
+        "photo": "photos/buraco-20260209083918-51bu50.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 53,
+        "lat": -29.8876972222222,
+        "lng": -50.2621694444444,
+        "address": "Rua Professora Leda Leal - Caiu do Céu",
+        "photo": "photos/buraco-20260209083922-b5cl8h.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-08",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 54,
+        "lat": -29.890226,
+        "lng": -50.260972,
+        "address": "Rua Voluntários da Pátria",
+        "photo": "photos/buraco-20260209084522-3hia1l.jpg",
+        "reporter": "Anderson Schuh",
+        "reportedDate": "2026-02-09",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 55,
+        "lat": -29.890157,
+        "lng": -50.260832,
+        "address": "Rua Voluntários da Pátria",
+        "photo": "photos/buraco-20260209084648-jgk54d.jpg",
+        "reporter": "Anderson Schuh",
+        "reportedDate": "2026-02-09",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 56,
+        "lat": -29.8899196,
+        "lng": -50.2601249,
+        "address": "Rua Duque de Caxias",
+        "photo": "photos/buraco-20260209084757-3pqweh.jpg",
+        "reporter": "Anderson Schuh",
+        "reportedDate": "2026-02-09",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
