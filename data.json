@@ -662,4 +662,28 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 57,
+        "lat": -29.892684, 
+        "lng": -50.2651310,
+        "address": "Rua Voluntários da Pátria esquina com Rua Manoel Marques da Rosa",
+        "photo": "photos/buraco-20260211074905-t7shed.jpg",
+        "reporter": "Liliane Nunes",
+        "reportedDate": "2026-02-11",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 58,
+        "lat": -29.900846, 
+        "lng": -50.2724600,
+        "address": "Rua Ceci Bastos 102, Bairro Glória",
+        "photo": "photos/buraco-20260211075046-12rie9.jpg",
+        "reporter": "Wolmar de Souza",
+        "reportedDate": "2026-02-11",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
