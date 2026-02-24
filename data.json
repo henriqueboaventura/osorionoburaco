@@ -686,4 +686,16 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 59,
+        "lat": -29.899425,
+        "lng": -50.2566138888889,
+        "address": "Rua Miguel Luiz Isoppo - Pitangas",
+        "photo": "photos/buraco-20260224084249-90fz8v.jpg",
+        "reporter": "Henrique Boaventura",
+        "reportedDate": "2026-02-13",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
