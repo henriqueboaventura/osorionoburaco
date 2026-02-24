@@ -698,4 +698,16 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 60,
+        "lat": -29.895455, 
+        "lng": -50.2733500,
+        "address": "Rua Barão do Triunfo 1655",
+        "photo": "photos/buraco-20260224193002-clw31v.jpg",
+        "reporter": "Angela Maria Borba Luz",
+        "reportedDate": "2026-02-24",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
