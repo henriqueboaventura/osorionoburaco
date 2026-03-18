@@ -710,4 +710,28 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 61,
+        "lat": -29.892708,
+        "lng": -50.2653272,
+        "address": "Rua Voluntários da Pátria - Centro",
+        "photo": "photos/buraco-20260318143921-u1rnon.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-14",
+        "fixed": false,
+        "fixedDate": null
+    }
+,
+    {
+        "id": 62,
+        "lat": -29.899873,
+        "lng": -50.2596275,
+        "address": "Rua Santos Dumont - Albatroz",
+        "photo": "photos/buraco-20260318143924-xz17hq.jpg",
+        "reporter": "Denilson Trespach",
+        "reportedDate": "2026-02-14",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
