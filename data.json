@@ -734,4 +734,16 @@
         "fixed": false,
         "fixedDate": null
     }
+,
+    {
+        "id": 63,
+        "lat": -29.882223, 
+        "lng": -50.260129,
+        "address": "Endereço a confirmar",
+        "photo": "photos/buraco-20260326130614-xniypy.jpg",
+        "reporter": "Isaia Alencar",
+        "reportedDate": "2026-03-26",
+        "fixed": false,
+        "fixedDate": null
+    }
 ]
